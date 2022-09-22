@@ -1,0 +1,110 @@
+{
+    "users": [
+        {
+            "name": "dev",
+            "inventory": {
+                "balance": 0,
+                "ressources": [
+                    {
+                        "item" : "gold",
+                        "quantity" : 1
+                    },
+                    {
+                        "item" : "iron",
+                        "quantity" : 10
+                    },
+                    {
+                        "item" : "wood",
+                        "quantity" : 100
+                    }
+                ]
+            },
+            "factory": {
+                "lvl": 0,
+                "name": "coding",
+                "production": []
+            }
+        }
+    ],
+    "offers": [],
+    "items": [
+        {
+            "name" : "money",
+            "grade" : 0
+        },
+        {
+            "name" : "wood",
+            "grade" : 0,
+            "price": {
+                "money" : 5,
+                "ressources": []
+            },
+            "sellPrice" : 0.5
+        },
+        {
+            "name" : "iron-oxyde",
+            "grade" : 0,
+            "price": {
+                "money" : 7,
+                "ressources": []
+            },
+            "sellPrice" : 0.7
+        },
+        {
+            "name" : "iron",
+            "grade" : 0,
+            "price": {
+                "money" : 25,
+                "ressources": []
+            },
+            "sellPrice" : 2.5
+        },
+        {
+            "name" : "gold",
+            "grade" : 1,
+            "price": {
+                "money" : 200,
+                "ressources": []
+            },
+            "sellPrice" : 20
+        }
+    ],
+    "production-line" : [
+        {
+            "name" : "iron-desoxydizer",
+            "productionStat" : {
+                "item" : "iron",
+                "production-rate" : "10"
+            },
+            "grade" : 0,
+            "price": {
+                "money" : 500,
+                "items": [
+                    {
+                        "item" : "iron-oxyde",
+                        "quantity" : 10
+                    }
+                ]
+            }
+        }
+    ],
+    "factory-upgrade" : [
+        {
+            "name" : "Factory upgrade level 1",
+            "grade" : 1,
+            "price": {
+                "money" : 1000,
+                "items": [
+                    {
+                        "item" : "iron",
+                        "quantity" : 100
+                    },
+                    {
+                        "item" : "gold",
+                        "quantity" : 500
+                    }
+                ]
+            }
+        }
+    ]
+}
