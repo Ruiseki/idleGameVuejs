@@ -1,17 +1,17 @@
 <template>
     <Nav/>
-    <Shop/>
+    <ShopCompo/>
 </template>
 
 <script>
-import Shop from '../components/shop.vue'
+import ShopCompo from '../components/shop.vue'
 import Nav from '../components/nav.vue'
 
 export default {
-    name: 'HomePage',
+    name: 'ShopPage',
     components: {
         Nav,
-        Shop
+        ShopCompo
     }
 }
 </script>

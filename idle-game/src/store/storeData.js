@@ -3,8 +3,12 @@ import {defineStore} from "pinia"
 export const store = defineStore("shop", {
     state: () => {  
         return {
-            userData: null
-        }       
+            userData: null,
+            items: null
+            
+        }
+    },
+    computed: {
         
     },
     actions: {
@@ -35,27 +39,19 @@ export const store = defineStore("shop", {
             return this.userData
         },
 
-        async generateItems() {
-            let ressources = this.userData.inventory.ressources
-            let generatedRessources = {}
-
-            for (let i = 0; i < ressources.length; i++) {
-                Math.random() == 1 
-                    this.generatedRessources = {
-
-                    }
-                }
-                 console.log(ressources[i])
-            }
-            
-            return ressources
-            /*this.userData = await (await fetch("http://10.57.29.146:8044/banana", {
+        async getItems() {
+            this.items = await (await fetch("http://10.57.29.146:8044/allItems", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ name: this.userData.name })
-            })).json()*/
-        }
+            })).json();
+
+            console.log(this.items);
+
+            return await this.items
+        },
+
+        
     }
 })

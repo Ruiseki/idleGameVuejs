@@ -14,7 +14,8 @@
 </template>
 
 <script>
-import { store } from '../store/storeData'
+import { store } from '../store/storeData';
+// import { factory } from '../components/factory.vue'
 
 export default {
     name: 'NavVue',
@@ -37,6 +38,7 @@ export default {
         let userData = store().getUserData()
 
         if (userData != null) {
+            
             this.factoryName = userData.factory.name
             this.username = userData.name
             this.balance = userData.inventory.balance

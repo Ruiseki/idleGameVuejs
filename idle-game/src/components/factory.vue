@@ -4,25 +4,32 @@
 </template>
 
 <script>
-import { store } from '../store/storeData'
+// import { store } from '../store/storeData'
 
 export default {
     name: 'FactoryVue',
     data() {
         return {
-            timeout: null
+            interval: null
         }
     },
     methods: {
-        async updateFactory() {
-            console.log(await store().generateItems())
-        }
+        launchProduction()
+        {
+            setInterval(() => {
+                this.userData.factory.production.forEach(element => {
+                    let target = this.userData.inventory.ressources.find((value) => value.item == element.name);
+                    target.quantity += element.productionRate / 60;
+                    console.log(`Producing ${target.item}`);
+                });
+            }, 1000);
+        },
     },
     mounted() {
-        this.timeout = setTimeout(this.updateFactory, 1000)
+        // this.interval = setInterval(this.updateFactory, 1000)
     },
     unmounted() {
-        clearTimeout(this.timeout)
+        clearInterval(this.interval)
     }
 }
 </script>

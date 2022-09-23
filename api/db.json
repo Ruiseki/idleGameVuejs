@@ -3,7 +3,7 @@
         {
             "name": "dev",
             "inventory": {
-                "balance": 0,
+                "balance": 1000000,
                 "ressources": [
                     {
                         "item" : "gold",
@@ -22,18 +22,23 @@
             "factory": {
                 "lvl": 0,
                 "name": "coding",
-                "production": []
+                "production": [
+                    {
+                        "name" : "money",
+                        "productionRate" : 600
+                    }
+                ]
             }
         }
     ],
     "offers": [],
     "items": [
         {
-            "name" : "money",
+            "item" : "money",
             "grade" : 0
         },
         {
-            "name" : "wood",
+            "item" : "wood",
             "grade" : 0,
             "price": {
                 "money" : 5,
@@ -42,7 +47,7 @@
             "sellPrice" : 0.5
         },
         {
-            "name" : "iron-oxyde",
+            "item" : "iron-oxyde",
             "grade" : 0,
             "price": {
                 "money" : 7,
@@ -51,7 +56,7 @@
             "sellPrice" : 0.7
         },
         {
-            "name" : "iron",
+            "item" : "iron",
             "grade" : 0,
             "price": {
                 "money" : 25,
@@ -60,7 +65,7 @@
             "sellPrice" : 2.5
         },
         {
-            "name" : "gold",
+            "item" : "gold",
             "grade" : 1,
             "price": {
                 "money" : 200,

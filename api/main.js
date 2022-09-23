@@ -1,4 +1,4 @@
-    const   express = require('express'),
+const   express = require('express'),
         fs = require('fs'),
         shell = require('shelljs'),
         bodyParser = require('body-parser')
@@ -11,7 +11,6 @@ var corsOptions = { // fuck off cors
     optionsSuccessStatus: 200,
     methods: 'POST'
 }
-
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
@@ -85,7 +84,7 @@ app.listen(8044, () => {
 
 function updateDb()
 {
-    // fs.writeFileSync('./db.json', JSON.stringify(db));
+    fs.writeFileSync('./db.json', JSON.stringify(db));
 }
 
 /*
